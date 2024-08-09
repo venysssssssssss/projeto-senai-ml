@@ -1,0 +1,101 @@
+Material,TipoVenda,TipoBarco,Comprimento,Largura,Peso,Preco
+Madeira,barco usado,Casa flutuante,8.82,3.58,4195.66,610521.37
+Termoplástico,barco novo encomendado,Barco esportivo,9.91,11.29,23452.37,31997.96
+Hypalon,barco usado,Mega Iate,10.09,14.94,42844.0,526223.62
+Hypalon,modelo de exibição,Esqui aquático,9.08,8.91,48648.53,683051.89
+Fibra de Carbono,barco novo em estoque,Esqui aquático,8.37,9.99,45353.59,863993.43
+GRP,modelo de exibição,Wakeboard/Wakesurf,47.46,14.09,7382.21,242025.55
+GRP,modelo de exibição,Flybridge,30.98,10.53,49627.03,21918.87
+PVC,barco novo encomendado,Barco de cabine,7.27,5.05,26569.25,155213.81
+Borracha,barco usado,Lancha,44.78,9.85,12973.3,702854.66
+PVC,barco usado,Barco de passageiros,13.52,4.77,21542.88,325029.35
+Borracha,barco novo encomendado,Clássico,19.89,13.86,49933.42,740670.12
+GRP,modelo de exibição,Barco de pesca,29.72,5.54,20003.29,21135.4
+Concreto Reforçado,barco novo encomendado,Bowrider,44.63,4.35,28901.9,172414.24
+Madeira,barco usado,Hardtop,15.27,7.28,6878.28,283261.29
+Fibra de Carbono,barco novo encomendado,Ketch,39.98,13.46,37077.07,990006.11
+Termoplástico,barco usado,Barco offshore,6.53,10.63,13173.03,387855.18
+Borracha,modelo de exibição,Ketch,49.03,6.02,17038.76,687417.27
+Plástico,barco novo encomendado,Ketch,19.91,10.87,47258.81,401733.14
+Plástico,barco novo em estoque,Hardtop,10.53,7.49,12174.02,780050.99
+Hypalon,barco novo encomendado,Pilothouse,12.46,11.16,38285.74,247365.54
+Madeira,barco usado,Hardtop,38.06,12.17,16906.8,715303.86
+Plástico,barco novo em estoque,Catamarã,45.03,3.19,15864.91,501136.16
+Alumínio,barco novo em estoque,Lancha,36.36,7.12,43563.86,125301.52
+Hypalon,barco usado,Barco console central,49.11,4.88,15258.12,770312.74
+Madeira,barco novo em estoque,Flybridge,6.05,8.52,14240.49,522500.85
+Plástico,barco novo em estoque,Lancha,33.94,8.92,42345.27,290431.53
+Madeira,barco novo encomendado,Barco console central,48.43,3.58,48146.54,518098.71
+Concreto Reforçado,barco novo em estoque,Flybridge,49.13,2.39,18732.79,55251.7
+Borracha,barco novo em estoque,Esqui aquático,36.07,8.95,31682.81,531415.67
+Madeira,barco usado,Wakeboard/Wakesurf,35.53,14.84,33353.38,987826.81
+Concreto Reforçado,barco novo em estoque,Barco de pontão,15.51,4.99,44266.65,170428.85
+Alumínio,barco usado,Lancha,33.26,2.98,30299.87,45003.97
+PVC,modelo de exibição,Barco de pesca,35.02,7.31,18397.86,448912.1
+Fibra de Carbono,barco novo encomendado,Barco esportivo,34.82,7.58,39958.18,534706.85
+Hypalon,barco novo em estoque,Barco de deck,45.97,2.22,40638.22,24462.39
+Hypalon,modelo de exibição,Barco de pontão,14.2,2.41,32418.65,665258.93
+Fibra de Carbono,barco novo em estoque,Pilothouse,47.09,12.83,12592.71,819066.5
+Hypalon,modelo de exibição,Flybridge,21.74,3.38,9591.94,506349.9
+Madeira,barco novo encomendado,Barco console central,20.93,3.4,19816.83,16269.53
+GRP,modelo de exibição,Barco esportivo,9.12,2.37,34618.03,106609.67
+Aço,modelo de exibição,Ketch,28.69,14.2,24819.42,13114.53
+Hypalon,barco usado,Trawler,10.31,11.02,904.72,532381.41
+Termoplástico,barco novo encomendado,Barco de pontão,7.6,13.02,22408.47,914337.39
+Borracha,barco usado,Barco de trabalho,14.96,7.24,43498.05,203533.01
+Fibra de Carbono,barco novo encomendado,Lancha,42.25,11.55,15511.47,529136.58
+Plástico,barco novo em estoque,Mega Iate,26.24,5.2,21569.11,342773.03
+Hypalon,modelo de exibição,Trawler,12.49,3.21,17291.59,869616.9
+Madeira,barco usado,Casa flutuante,16.73,10.39,29963.13,622103.38
+Aço,barco novo encomendado,Esqui aquático,41.52,4.22,18349.22,394392.7
+Hypalon,barco novo em estoque,Mega Iate,24.92,6.73,16226.47,729240.18
+Fibra de Carbono,barco novo encomendado,Flybridge,46.67,11.0,10148.36,246172.37
+Alumínio,barco novo em estoque,Casa flutuante,46.44,7.34,34018.86,451814.93
+PVC,barco novo encomendado,Barco de cabine,17.49,6.83,29380.97,668185.63
+Alumínio,barco novo em estoque,Hardtop,16.16,6.74,46509.1,771663.96
+Madeira,barco novo em estoque,Barco offshore,35.62,6.53,49376.39,141537.3
+PVC,barco novo em estoque,Esqui aquático,47.85,2.9,30928.34,954876.25
+Hypalon,barco usado,Hardtop,34.64,7.34,5144.74,76249.88
+Madeira,barco novo em estoque,Hardtop,27.13,3.0,26790.16,443300.12
+GRP,barco novo em estoque,Barco esportivo,39.81,11.19,49719.01,753830.68
+Termoplástico,barco usado,Mega Iate,12.16,5.58,29359.26,946562.19
+Fibra de Carbono,barco novo em estoque,Lancha,38.04,11.63,22846.79,781279.99
+Alumínio,modelo de exibição,Barco console central,41.93,4.33,30414.23,835018.74
+PVC,barco novo encomendado,Catamarã,35.1,13.04,45570.27,551612.31
+PVC,barco novo encomendado,Barco de trabalho,7.11,12.25,48292.7,449580.98
+Madeira,modelo de exibição,Iate a motor,32.51,14.17,12067.41,273350.53
+Concreto Reforçado,barco novo em estoque,Motorsailer,11.45,3.67,33101.72,503151.08
+Madeira,barco novo em estoque,Barco console central,34.97,5.8,10030.09,973612.22
+Madeira,barco usado,Catamarã,23.7,3.31,14247.48,543665.48
+Alumínio,barco novo em estoque,Barco console central,20.76,5.37,19650.65,598837.75
+Aço,barco novo em estoque,Trawler,20.84,11.72,19303.2,285287.44
+PVC,barco usado,Barco esportivo,24.97,12.73,14649.82,533317.32
+Aço,barco usado,Barco de trabalho,5.88,9.07,4191.13,131466.16
+Alumínio,barco novo em estoque,Barco de passageiros,18.98,2.41,26241.76,957768.94
+Fibra de Carbono,barco novo encomendado,Mega Iate,13.53,7.87,21274.64,20290.89
+Fibra de Carbono,barco novo encomendado,Pilothouse,8.44,2.58,9980.61,812013.11
+Concreto Reforçado,barco novo em estoque,Barco de cabine,13.78,4.24,31487.67,937264.02
+Hypalon,modelo de exibição,Barco de trabalho,25.73,7.99,44715.11,515193.28
+Termoplástico,modelo de exibição,Mega Iate,11.36,4.83,11006.42,84105.01
+GRP,barco novo encomendado,Wakeboard/Wakesurf,35.25,2.56,34103.96,329979.87
+Concreto Reforçado,barco novo em estoque,Barco de pesca,23.29,4.9,13880.39,154646.83
+Hypalon,modelo de exibição,Mega Iate,14.23,7.15,17995.95,536477.77
+Plástico,barco usado,Iate a motor,11.64,2.17,23088.38,613455.36
+Aço,modelo de exibição,Iate a motor,14.54,14.85,12430.89,567641.41
+GRP,modelo de exibição,Pilothouse,22.5,5.88,45312.44,118861.22
+Madeira,barco novo encomendado,Bowrider,40.99,2.78,15461.91,192783.58
+Hypalon,barco usado,Hardtop,15.1,4.31,21368.56,962513.53
+Madeira,barco novo encomendado,Clássico,37.81,7.31,33559.68,90980.78
+Borracha,barco novo em estoque,Iate a motor,18.72,4.05,27583.23,443818.47
+Aço,barco novo em estoque,Barco console central,45.41,3.42,15784.55,826715.44
+GRP,barco usado,Casa flutuante,25.01,4.6,14719.78,955313.04
+Plástico,modelo de exibição,Barco esportivo,42.17,14.62,35886.87,494356.41
+Hypalon,barco novo encomendado,Esqui aquático,42.45,9.9,8410.38,64122.07
+GRP,barco usado,Casa flutuante,28.86,2.65,25264.1,913796.0
+PVC,barco novo em estoque,Esqui aquático,28.94,7.3,25325.86,895904.43
+PVC,barco novo em estoque,Casa flutuante,40.65,11.72,25915.95,504119.99
+Fibra de Carbono,barco novo em estoque,Catamarã,24.83,11.69,7764.99,471642.79
+Hypalon,barco novo em estoque,Barco de deck,7.56,11.9,28813.53,232346.28
+Termoplástico,modelo de exibição,Barco de cabine,32.45,7.42,24557.53,195784.38
+Alumínio,barco usado,Esqui aquático,21.62,3.22,24260.76,525522.43
+Alumínio,barco novo encomendado,Mega Iate,9.68,13.6,47850.31,632271.13

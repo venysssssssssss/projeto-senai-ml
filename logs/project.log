@@ -1,0 +1,19 @@
+2024-08-08 19:00:40,772 - INFO - Gerando datasets de treino e teste
+2024-08-08 19:00:40,781 - INFO - Treinando o modelo
+2024-08-08 19:00:40,781 - INFO - Carregando dados do arquivo: data/dataset_treino.csv
+2024-08-09 00:31:10,746 - INFO - Gerando datasets de treino e teste
+2024-08-09 00:31:10,756 - INFO - Treinando o modelo
+2024-08-09 00:31:10,756 - INFO - Carregando dados do arquivo: data/dataset_treino.csv
+2024-08-09 00:34:37,957 - INFO - Gerando datasets de treino e teste
+2024-08-09 00:34:37,966 - INFO - Treinando o modelo
+2024-08-09 00:34:37,966 - INFO - Carregando dados do arquivo: data/dataset_treino.csv
+2024-08-09 00:34:37,976 - INFO - Treinando o modelo de árvore de decisão com GridSearchCV
+2024-08-09 00:34:40,604 - INFO - Melhor modelo treinado salvo em models/boat_price_prediction_model.pkl com os parâmetros: {'regressor__max_depth': 10, 'regressor__min_samples_leaf': 10, 'regressor__min_samples_split': 5}
+2024-08-09 00:34:40,604 - INFO - Avaliando o modelo treinado
+2024-08-09 00:34:40,605 - INFO - Carregando dados do arquivo: data/dataset_teste.csv
+2024-08-09 00:34:40,609 - INFO - Carregando modelo do arquivo: models/boat_price_prediction_model.pkl
+2024-08-09 00:34:40,615 - INFO - Avaliando o modelo
+2024-08-09 00:34:40,629 - INFO - Métricas de Avaliação do Modelo:
+2024-08-09 00:34:40,629 - INFO - MAE: 265315.2705
+2024-08-09 00:34:40,630 - INFO - MSE: 106189212325.2438
+2024-08-09 00:34:40,630 - INFO - R2: -0.2339
