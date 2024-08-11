@@ -1,3 +1,5 @@
+# A documentação do código em si se encontra nos deployments
+
 # Tutorial de Instalação do pip, Poetry e pyenv no Windows e Linux
 
 ## Sumário
