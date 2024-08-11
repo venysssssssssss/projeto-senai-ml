@@ -1,4 +1,4 @@
-# A documentação do código em si se encontra nos deployments
+# A documentação do código em si se encontra nos deployments, segue link [https://venysssssssssss.github.io/projeto-senai-ml/]
 
 # Tutorial de Instalação do pip, Poetry e pyenv no Windows e Linux
 
