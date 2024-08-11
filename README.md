@@ -18,16 +18,6 @@
 
 ---
 
-Espero que isso ajude! Se precisar de mais alguma coisa, estou à disposição. 😊
-
-Source: Conversation with Copilot, 8/11/2024
-(1) Data Science Academy. https://www.datascienceacademy.com.br/.
-(2) Data Science Certification Training, Courses and Classes Online. https://www.datascienceacademy.io/.
-(3) Learn Data Science and AI Online | DataCamp. https://www.datacamp.com/.
-(4) Data Science Courses | Learn Data Science Online | Udacity. https://www.udacity.com/school/data-science.
-
-
-
 # A documentação do código em si se encontra nos deployments, segue link [https://venysssssssssss.github.io/projeto-senai-ml/]
 
 # Tutorial de Instalação do pip, Poetry e pyenv no Windows e Linux
