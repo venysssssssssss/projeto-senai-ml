@@ -1,0 +1,999 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../evaluation/">
+      
+      
+        <link rel="next" href="../model_visualization/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+      
+        <title>Modelo Primeiro - Documentação do Projeto de Data Science do Senai</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modulo-para-criacao-e-treinamento-do-modelo-de-machine-learning" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="Documentação do Projeto de Data Science do Senai" class="md-header__button md-logo" aria-label="Documentação do Projeto de Data Science do Senai" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentação do Projeto de Data Science do Senai
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Modelo Primeiro
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Documentação do Projeto de Data Science do Senai" class="md-nav__button md-logo" aria-label="Documentação do Projeto de Data Science do Senai" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Documentação do Projeto de Data Science do Senai
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Início
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Configuração
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Configuração
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config_loader/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuração de Carregamento
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dados
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Dados
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data_generation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Geração de Dados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data_preparation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preparação de Dados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Modelos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Modelos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../evaluation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Avaliação
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Modelo Primeiro
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Modelo Primeiro
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#funcoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funções
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Funções">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#carregar_config" class="md-nav__link">
+    <span class="md-ellipsis">
+      carregar_config
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#carregar_dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      carregar_dados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preprocessar_dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      preprocessar_dados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#treinar_modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      treinar_modelo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obter_nomes_features" class="md-nav__link">
+    <span class="md-ellipsis">
+      obter_nomes_features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplo-completo-de-uso-do-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemplo Completo de Uso do Módulo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consideracoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerações
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Considerações">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracao-yaml-exemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuração YAML Exemplo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model_visualization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visualização de Modelos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../main/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Principal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuração Avançada
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#funcoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funções
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Funções">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#carregar_config" class="md-nav__link">
+    <span class="md-ellipsis">
+      carregar_config
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#carregar_dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      carregar_dados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preprocessar_dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      preprocessar_dados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#treinar_modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      treinar_modelo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obter_nomes_features" class="md-nav__link">
+    <span class="md-ellipsis">
+      obter_nomes_features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplo-completo-de-uso-do-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemplo Completo de Uso do Módulo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consideracoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerações
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Considerações">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracao-yaml-exemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuração YAML Exemplo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p>Aqui está a documentação em formato Markdown para o módulo de criação e treinamento do modelo de machine learning:</p>
+<h1 id="modulo-para-criacao-e-treinamento-do-modelo-de-machine-learning">Módulo para Criação e Treinamento do Modelo de Machine Learning</h1>
+<p>Este módulo é responsável por carregar as configurações, processar os dados, treinar um modelo de árvore de decisão utilizando <code>GridSearchCV</code> para otimização de hiperparâmetros, e salvar o modelo treinado.</p>
+<h2 id="funcoes">Funções</h2>
+<h3 id="carregar_config"><code>carregar_config</code></h3>
+<pre><code class="language-python">def carregar_config(config_path: str) -&gt; dict:
+    &quot;&quot;&quot;
+    Carrega as configurações do arquivo YAML.
+
+    Esta função lê um arquivo YAML de configuração e retorna o conteúdo como um
+    dicionário Python. As configurações carregadas incluem parâmetros necessários
+    para a geração de dados, treinamento do modelo e configurações de logging.
+
+    Args:
+        config_path (str): Caminho para o arquivo de configuração YAML.
+
+    Returns:
+        dict: Dicionário com as configurações carregadas.
+    &quot;&quot;&quot;
+</code></pre>
+<p><strong>Descrição:</strong><br />
+Carrega as configurações necessárias a partir de um arquivo YAML.</p>
+<p><strong>Parâmetros:</strong>
+- <code>config_path</code> (<code>str</code>): Caminho para o arquivo de configuração YAML.</p>
+<p><strong>Retorno:</strong>
+- <code>dict</code>: Dicionário contendo as configurações carregadas.</p>
+<p><strong>Exemplo de Uso:</strong></p>
+<pre><code class="language-python">config = carregar_config(&quot;config/config.yaml&quot;)
+</code></pre>
+<h3 id="carregar_dados"><code>carregar_dados</code></h3>
+<pre><code class="language-python">def carregar_dados(nome_arquivo: str) -&gt; pd.DataFrame:
+    &quot;&quot;&quot;
+    Carrega o dataset de um arquivo CSV.
+
+    Esta função carrega os dados de um arquivo CSV e os retorna como um DataFrame
+    do pandas. É usado tanto para carregar dados de treino quanto de teste.
+
+    Args:
+        nome_arquivo (str): Nome do arquivo CSV.
+
+    Returns:
+        pd.DataFrame: DataFrame contendo o dataset carregado.
+    &quot;&quot;&quot;
+</code></pre>
+<p><strong>Descrição:</strong><br />
+Carrega os dados de um arquivo CSV para um DataFrame.</p>
+<p><strong>Parâmetros:</strong>
+- <code>nome_arquivo</code> (<code>str</code>): Nome do arquivo CSV a ser carregado.</p>
+<p><strong>Retorno:</strong>
+- <code>pd.DataFrame</code>: DataFrame contendo os dados carregados.</p>
+<p><strong>Exemplo de Uso:</strong></p>
+<pre><code class="language-python">dados = carregar_dados(&quot;data/dataset_treino.csv&quot;)
+</code></pre>
+<h3 id="preprocessar_dados"><code>preprocessar_dados</code></h3>
+<pre><code class="language-python">def preprocessar_dados(dados: pd.DataFrame):
+    &quot;&quot;&quot;
+    Pré-processa os dados do dataset.
+
+    Esta função realiza o pré-processamento dos dados, separando as features (X)
+    da variável alvo (y), e aplicando transformações como escalonamento das features
+    numéricas e codificação one-hot das features categóricas. O pré-processador resultante
+    é retornado junto com os dados processados.
+
+    Args:
+        dados (pd.DataFrame): DataFrame contendo o dataset.
+
+    Returns:
+        X (pd.DataFrame): Features do dataset pré-processadas.
+        y (pd.Series): Variável alvo (preço).
+        preprocessor (ColumnTransformer): Pipeline de pré-processamento.
+    &quot;&quot;&quot;
+</code></pre>
+<p><strong>Descrição:</strong><br />
+Pré-processa os dados, separando as features (<code>X</code>) da variável alvo (<code>y</code>), e aplica transformações necessárias como escalonamento e codificação one-hot.</p>
+<p><strong>Parâmetros:</strong>
+- <code>dados</code> (<code>pd.DataFrame</code>): DataFrame contendo o dataset a ser pré-processado.</p>
+<p><strong>Retorno:</strong>
+- <code>X</code> (<code>pd.DataFrame</code>): Features do dataset após o pré-processamento.
+- <code>y</code> (<code>pd.Series</code>): Variável alvo.
+- <code>preprocessor</code> (<code>ColumnTransformer</code>): Pipeline de pré-processamento.</p>
+<p><strong>Exemplo de Uso:</strong></p>
+<pre><code class="language-python">X, y, preprocessor = preprocessar_dados(dados)
+</code></pre>
+<h3 id="treinar_modelo"><code>treinar_modelo</code></h3>
+<pre><code class="language-python">def treinar_modelo(X, y, preprocessor, save_path: str) -&gt; Pipeline:
+    &quot;&quot;&quot;
+    Treina o modelo de árvore de decisão utilizando GridSearchCV para otimização de hiperparâmetros.
+
+    Esta função configura um pipeline que combina o pré-processamento dos dados com
+    o modelo de árvore de decisão. Em seguida, realiza a busca pelos melhores hiperparâmetros
+    utilizando o GridSearchCV. Após encontrar o melhor modelo, ele é salvo no caminho especificado.
+
+    Args:
+        X (pd.DataFrame): Features do dataset.
+        y (pd.Series): Variável alvo (preço).
+        preprocessor (ColumnTransformer): Pipeline de pré-processamento.
+        save_path (str): Caminho para salvar o modelo treinado.
+
+    Returns:
+        Pipeline: Modelo treinado com os melhores hiperparâmetros.
+    &quot;&quot;&quot;
+</code></pre>
+<p><strong>Descrição:</strong><br />
+Treina um modelo de árvore de decisão utilizando <code>GridSearchCV</code> para otimização de hiperparâmetros. O modelo final é salvo no caminho especificado.</p>
+<p><strong>Parâmetros:</strong>
+- <code>X</code> (<code>pd.DataFrame</code>): Features do dataset.
+- <code>y</code> (<code>pd.Series</code>): Variável alvo.
+- <code>preprocessor</code> (<code>ColumnTransformer</code>): Pipeline de pré-processamento dos dados.
+- <code>save_path</code> (<code>str</code>): Caminho para salvar o modelo treinado.</p>
+<p><strong>Retorno:</strong>
+- <code>Pipeline</code>: Pipeline contendo o melhor modelo treinado.</p>
+<p><strong>Exemplo de Uso:</strong></p>
+<pre><code class="language-python">modelo = treinar_modelo(X, y, preprocessor, &quot;models/melhor_modelo.joblib&quot;)
+</code></pre>
+<h3 id="obter_nomes_features"><code>obter_nomes_features</code></h3>
+<pre><code class="language-python">def obter_nomes_features(preprocessor, X) -&gt; list:
+    &quot;&quot;&quot;
+    Ajusta o pré-processador e obtém os nomes das features após o pré-processamento.
+
+    Esta função ajusta o pré-processador aos dados de entrada e extrai os nomes
+    das features que resultam do pré-processamento, incluindo tanto as features numéricas
+    quanto as features categóricas codificadas.
+
+    Args:
+        preprocessor (ColumnTransformer): Pipeline de pré-processamento.
+        X (pd.DataFrame): DataFrame de features.
+
+    Returns:
+        list: Lista com os nomes das features após o pré-processamento.
+    &quot;&quot;&quot;
+</code></pre>
+<p><strong>Descrição:</strong><br />
+Ajusta o pré-processador aos dados e retorna uma lista com os nomes das features resultantes, incluindo features categóricas codificadas.</p>
+<p><strong>Parâmetros:</strong>
+- <code>preprocessor</code> (<code>ColumnTransformer</code>): Pipeline de pré-processamento.
+- <code>X</code> (<code>pd.DataFrame</code>): Features que serão ajustadas no pré-processador.</p>
+<p><strong>Retorno:</strong>
+- <code>list</code>: Lista com os nomes das features após o pré-processamento.</p>
+<p><strong>Exemplo de Uso:</strong></p>
+<pre><code class="language-python">nomes_features = obter_nomes_features(preprocessor, X)
+</code></pre>
+<h2 id="exemplo-completo-de-uso-do-modulo">Exemplo Completo de Uso do Módulo</h2>
+<pre><code class="language-python">if __name__ == &quot;__main__&quot;:
+    # Carregar configurações do arquivo YAML
+    config = carregar_config(&quot;config/config.yaml&quot;)
+
+    # Configurar logging com base nas configurações carregadas
+    logging.basicConfig(filename=config['logging']['log_file'], level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+    # Carregar e pré-processar os dados de treino
+    dados_treino = carregar_dados(&quot;data/dataset_treino.csv&quot;)
+    X_treino, y_treino, preprocessor = preprocessar_dados(dados_treino)
+
+    # Ajustar o pré-processador e obter os nomes das features
+    feature_names = obter_nomes_features(preprocessor, X_treino)
+
+    # Treinar o modelo e salvar o melhor modelo encontrado
+    modelo = treinar_modelo(X_treino, y_treino, preprocessor, config['model']['save_path'])
+    logging.info(f&quot;Nomes das features: {feature_names}&quot;)
+</code></pre>
+<p><strong>Descrição:</strong><br />
+Este bloco de código demonstra o fluxo completo desde o carregamento das configurações, pré-processamento dos dados, até o treinamento e salvamento do modelo.</p>
+<h2 id="consideracoes">Considerações</h2>
+<ul>
+<li><strong>Otimização</strong>: O uso de <code>GridSearchCV</code> permite a otimização dos hiperparâmetros do modelo de árvore de decisão.</li>
+<li><strong>Configuração</strong>: Todas as configurações necessárias são carregadas de um arquivo YAML, permitindo flexibilidade.</li>
+<li><strong>Logging</strong>: O módulo registra as etapas importantes do fluxo, facilitando o rastreamento e a depuração.</li>
+</ul>
+<h3 id="configuracao-yaml-exemplo">Configuração YAML Exemplo</h3>
+<p>Aqui está um exemplo de como o arquivo <code>config.yaml</code> poderia ser estruturado:</p>
+<pre><code class="language-yaml">logging:
+  log_file: &quot;logs/project.log&quot;
+
+model:
+  save_path: &quot;models/melhor_modelo.joblib&quot;
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>
