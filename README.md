@@ -1,7 +1,4 @@
 # Cursos 
-
-Claro! Aqui está um resumo das plataformas **freeCodeCamp**, **Cognitive Class** e **Data Science Academy**, e sua relevância no ensino de Machine Learning:
-
 ---
 
 ### freeCodeCamp
