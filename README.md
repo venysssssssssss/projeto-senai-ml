@@ -10,6 +10,10 @@
 3. [Instalação do pyenv](#instalação-do-pyenv)
     - [Windows](#pyenv-no-windows)
     - [Linux](#pyenv-no-linux)
+4. [Introdução](#introdução)
+5. [Verificando e Ativando a Versão do Python com pyenv](#verificando-e-ativando-a-versão-do-python-com-pyenv)
+6. [Gerenciando Dependências com Poetry](#gerenciando-dependências-com-poetry)
+7. [Boas Práticas](#boas-práticas)
 
 ---
 
