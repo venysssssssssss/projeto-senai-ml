@@ -179,3 +179,98 @@ O `pyenv` é uma ferramenta útil para gerenciar várias versões do Python em u
 ## Conclusão
 
 Após seguir os passos acima, você terá o `pip`, `Poetry` e `pyenv` instalados e configurados corretamente no seu sistema, tanto no Windows quanto no Linux. Agora você está pronto para gerenciar seus ambientes Python e dependências com eficiência!
+
+## Introdução
+
+Se você está trabalhando em um projeto que já utiliza o `pyenv` e o `Poetry`, é importante entender como essas ferramentas interagem e como utilizá-las corretamente para gerenciar versões do Python e dependências. Este guia vai te mostrar como verificar e ativar a versão correta do Python com o `pyenv` e como gerenciar dependências e ambientes virtuais usando o `Poetry`.
+
+## Verificando e Ativando a Versão do Python com pyenv
+
+O `pyenv` permite gerenciar múltiplas versões do Python em um sistema, o que é particularmente útil para projetos que exigem versões específicas.
+
+1. **Verifique a versão de Python utilizada pelo projeto**:
+    - Normalmente, o projeto especifica a versão do Python em um arquivo `.python-version` ou diretamente no `pyproject.toml` (caso o `Poetry` esteja configurado para isso).
+    - Para verificar a versão configurada, execute:
+    ```bash
+    cat .python-version
+    ```
+    - Ou, caso esteja especificado no `pyproject.toml`, procure pela seção `[tool.poetry.dependencies]`:
+    ```toml
+    [tool.poetry.dependencies]
+    python = "^3.9"
+    ```
+
+2. **Ative a versão correta do Python**:
+    - Com o `pyenv`, ative a versão correta:
+    ```bash
+    pyenv install 3.9.6 # Se a versão ainda não estiver instalada
+    pyenv local 3.9.6
+    ```
+    - Isso garante que todos os comandos Python executados dentro do diretório do projeto utilizem a versão especificada.
+
+3. **Verifique a versão ativa**:
+    - Certifique-se de que a versão correta está ativa:
+    ```bash
+    python --version
+    ```
+
+## Gerenciando Dependências com Poetry
+
+O `Poetry` facilita a gestão de dependências e ambientes virtuais, centralizando as configurações em um único arquivo, o `pyproject.toml`.
+
+1. **Instale as dependências do projeto**:
+    - O arquivo `pyproject.toml` no diretório do projeto lista todas as dependências necessárias. Para instalá-las, execute:
+    ```bash
+    poetry install
+    ```
+    - Isso cria automaticamente um ambiente virtual com as dependências listadas e configuradas.
+
+2. **Ative o ambiente virtual**:
+    - Para trabalhar dentro do ambiente virtual criado pelo `Poetry`, ative-o com:
+    ```bash
+    poetry shell
+    ```
+    - Agora, todos os comandos executados (como `python`, `pip`, etc.) usarão o ambiente virtual gerado pelo `Poetry`.
+
+3. **Adicionando novas dependências**:
+    - Para adicionar uma nova dependência ao projeto:
+    ```bash
+    poetry add nome-da-dependência
+    ```
+    - Isso atualiza automaticamente o `pyproject.toml` e o `poetry.lock`.
+
+4. **Removendo dependências**:
+    - Para remover uma dependência:
+    ```bash
+    poetry remove nome-da-dependência
+    ```
+    - O `Poetry` atualizará os arquivos de configuração e removerá a dependência do ambiente virtual.
+
+5. **Atualizando dependências**:
+    - Para garantir que todas as dependências estejam na última versão permitida pelas restrições no `pyproject.toml`:
+    ```bash
+    poetry update
+    ```
+
+## Boas Práticas
+
+Aqui estão algumas boas práticas para trabalhar com `pyenv` e `Poetry` em projetos existentes:
+
+1. **Sempre verifique a versão do Python**:
+    - Antes de começar a trabalhar em um projeto, verifique se a versão correta do Python está ativa usando o `pyenv`. Isso evita problemas de compatibilidade.
+
+2. **Mantenha o ambiente virtual ativado**:
+    - Utilize o ambiente virtual criado pelo `Poetry` para garantir que as dependências sejam consistentes com as do projeto.
+
+3. **Utilize o comando `poetry lock`**:
+    - Sempre que adicionar ou remover uma dependência, utilize o comando `poetry lock` para garantir que o arquivo `poetry.lock` esteja atualizado.
+
+4. **Documente as versões**:
+    - Mantenha o arquivo `pyproject.toml` bem documentado, incluindo as versões das dependências e a versão do Python, para facilitar a manutenção e colaboração no projeto.
+
+---
+
+## Conclusão
+
+Ao seguir essas instruções, você poderá utilizar de maneira eficiente o `pyenv` para gerenciar versões do Python e o `Poetry` para gerenciar dependências em um ambiente de projeto existente. Isso garante que você tenha um ambiente consistente e configurado corretamente, permitindo um desenvolvimento fluido e sem complicações.
+
